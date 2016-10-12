@@ -5,36 +5,24 @@
 <view class="page-body">
   <view class="page-body-list">
     <scroll-view scroll-y="true" class="page-body" bindscrolltolower="loadMore">
-      <navigator url="../detail/detail?id=1" hover-class="none">
-	<view class="page-body-list-item">
-	  <image class="page-body-list-item-image" src="{{img}}" mode="aspectFill" />
-	  <view class="page-body-list-item-content">
-	    <text class="content-title">title</text>
-	    <text class="content-subtitle">year</text>
-	    <view class="artists">
-	      <text>导演</text>
+      <loading hidden="{{!loading}}">加载中...</loading>
+      <block wx:for="{{movies}}">
+	<navigator url="../detail/detail?id=1" hover-class="none">
+	  <view class="page-body-list-item">
+	    <image class="page-body-list-item-image" src="{{item.images.small}}" mode="aspectFill" />
+	    <view class="page-body-list-item-content">
+	      <text class="content-title">{{item.title}}</text>
+	      <text class="content-subtitle">{{item.title}}({{item.year}})</text>
+	      <view class="artists">
+		<text>导演:<block wx:for="{{item.directors}}">{{item.name}}</block></text>
+	      </view>
+	    </view>
+	    <view class="rating">
+	      <text>{{item.rating.average}}</text>
 	    </view>
 	  </view>
-	  <view class="rating">
-	    <text>8.7</text>
-	  </view>
-	</view>
-      </navigator>
-      <navigator url="../detail/detail?id=1" hover-class="none">
-	<view class="page-body-list-item">
-	  <image class="page-body-list-item-image" src="{{img}}" mode="aspectFill" />
-	  <view class="page-body-list-item-content">
-	    <text class="content-title">title</text>
-	    <text class="content-subtitle">year</text>
-	    <view class="artists">
-	      <text>导演</text>
-	    </view>
-	  </view>
-	  <view class="rating">
-	    <text>8.7</text>
-	  </view>
-	</view>
-      </navigator>
+	</navigator>
+      </block>
     </scroll-view>
   </view>
 </view>

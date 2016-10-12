@@ -42,10 +42,12 @@
 }
 .content-title{
     font-size:40rpx;
+    margin-bottom:20rpx;
 }
 .content-subtitle{
     font-size:22rpx;
     color:#c0c0c0;
+    margin-bottom:20rpx;
 }
 .artists{
     font-size:26rpx;
