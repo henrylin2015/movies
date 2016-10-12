@@ -1,12 +1,17 @@
 {
-  "pages":[
-    "pages/index/index",
-    "pages/logs/logs"
-  ],
-  "window":{
-    "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#35495e",
-    "navigationBarTitleText": "电影·豆瓣",
-    "navigationBarTextStyle":"white"
-  }
+    "pages":[
+	
+	"pages/board/board",
+	"pages/list/list",
+	"pages/detail/detail",
+	"pages/index/index",
+	"pages/logs/logs"
+	
+    ],
+    "window":{
+	"backgroundTextStyle":"light",
+	"navigationBarBackgroundColor": "#35495e",
+	"navigationBarTitleText": "电影·豆瓣",
+	"navigationBarTextStyle":"white"
+    }
 }

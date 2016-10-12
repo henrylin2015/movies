@@ -1,0 +1,28 @@
+<!-- board.wxml html file -->
+<view class="section">
+  <view class="head">
+    <swiper class="carousel" indicator-dots="true" autoplay="true" interval="5000" duration="1000">
+      <block wx:for="{{imgUrl}}">
+	<swiper-item class="carousel-item">
+	  <image src="{{item}}"  mode="aspectFill"/>
+	</swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <view class="header">
+    <text class="title">豆瓣电影榜单集合</text>
+    <text class="subtitle">最新,最IN的影视信息收集~</text>
+  </view>
+  <view class="body">
+    <view class="board-list">
+      <block wx:for="{{boards}}">
+	<navigator url="../list/list?type={{item.key}}&name={{item.name}}" hover-class="none">
+	  <view class="board-list-item">
+	    <text>{{item.name}}</text>
+	    <image src="../../images/arrowright.png" mode="aspectFill"/>
+	  </view>
+	</navigator>
+      </block>
+    </view>
+  </view>
+</view>
